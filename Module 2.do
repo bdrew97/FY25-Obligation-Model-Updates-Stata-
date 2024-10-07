@@ -101,7 +101,7 @@ Sheets("StataInput").Protect password:="budgetrocks"
      ' If Range("FX_Denomination").Value = "Yes" Then
      '       Premium_cmd = Range("Stata_Executable").Text
      '       DoFilePath = RemoveBackSlash(Range("Stata_Dofile_Path").Text)
-     '       dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2024_FinanceModel\Premium Calculation.do"
+     '       dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2025_FinanceModel\Premium Calculation.do"
      '       Premium_cmd = """" & Premium_cmd & """"
      '       dofile = """" & dofile & """"
      '       DoFilePath = """" & DoFilePath & """"
@@ -158,7 +158,7 @@ ElseIf Sheets("Inputs").Range("Run_Option") = "Zero Financing (Interest Goal See
      '   If Range("FX_Denomination").Value = "Yes" Then
      '       Premium_cmd = Range("Stata_Executable").Text
      '       DoFilePath = RemoveBackSlash(Range("Stata_Dofile_Path").Text)
-     '       dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2024_FinanceModel\Premium Calculation.do"
+     '       dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2025_FinanceModel\Premium Calculation.do"
      '       Premium_cmd = """" & Premium_cmd & """"
      '       dofile = """" & dofile & """"
      '       DoFilePath = """" & DoFilePath & """"
@@ -242,7 +242,7 @@ ElseIf Sheets("Inputs").Range("Run_Option") = "Zero Total Subsidy (Fee Goal Seek
    ' If Range("FX_Denomination").Value = "Yes" Then
    '         Premium_cmd = Range("Stata_Executable").Text
    '         DoFilePath = RemoveBackSlash(Range("Stata_Dofile_Path").Text)
-   '         dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2024_FinanceModel\Premium Calculation.do"
+   '         dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2025_FinanceModel\Premium Calculation.do"
    '         Premium_cmd = """" & Premium_cmd & """"
    '         dofile = """" & dofile & """"
    '         DoFilePath = """" & DoFilePath & """"
@@ -351,7 +351,7 @@ Sub RunStata()
   LoanType = Trim(Range("Direct_Guar").Text)
   LoanOfficer = Trim(Range("Loan_Officer").Text)
 
-  dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2024_FinanceModel\DFC Obligation Master Dofile.do"
+  dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2025_FinanceModel\DFC Obligation Master Dofile.do"
   'dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v4_Merge_FX\DFC Obligation Master Dofile.do"
 
   PPS = RemoveBackSlash(Range("Prin_Payment_Structure").Text)
@@ -499,8 +499,8 @@ Sub RunStata()
   DoFilePath = """" & DoFilePath & """"
   'Brandon edit
   LoanOfficer = """" & LoanOfficer & """"
-  cmd_line = cmd_line & " do " & " " & dofile & " " & DoFilePath & " " & PPS & " " & "v1_2024_FinanceModel" & " " & OSF & " " & FSS & " " & FXC & " " & CurrencyType & " " & LoanOfficer
-  'cmd_line = cmd_line & " do " & " " & dofile & " " & DoFilePath & " " & PPS & " " & "v1_2024_FinanceModel" & " " & OSF & " " & FSS & " " & FXC & " " & CurrencyType
+  cmd_line = cmd_line & " do " & " " & dofile & " " & DoFilePath & " " & PPS & " " & "v1_2025_FinanceModel" & " " & OSF & " " & FSS & " " & FXC & " " & CurrencyType & " " & LoanOfficer
+  'cmd_line = cmd_line & " do " & " " & dofile & " " & DoFilePath & " " & PPS & " " & "v1_2025_FinanceModel" & " " & OSF & " " & FSS & " " & FXC & " " & CurrencyType
 
   'rv = Shell(cmd_line)
   ShellAndWait (cmd_line)
@@ -549,7 +549,7 @@ Sub SaveResults()
   LoanType = Range("Direct_Guar").Text
   LoanOfficer = Range("Loan_Officer").Text
   
-  dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2024_FinanceModel\Save Results.do"
+  dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v1_2025_FinanceModel\Save Results.do"
 'dofile = RemoveBackSlash(Range("Stata_Dofile_Path").Text) & "\DoFiles\v4_Merge_FX\Save Results.do"
 
   cmd_line = """" & cmd_line & """"

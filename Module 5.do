@@ -391,6 +391,7 @@ Dim ws As Worksheet
     For Each ws In ActiveWorkbook.Worksheets
         ws.Protect password:="budgetrocks"
     Next ws
+    ActiveWorkbook.Sheets("Cash Flow - To CSC").Unprotect password:="budgetrocks"
 End Sub
 
 
