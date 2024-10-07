@@ -50,7 +50,7 @@ Sub ThreeExecutableExist()
       If FileOrDirExists(FileNames(count)) Then
 '          MsgBox FileNames(count) & " exists!"
       Else
-          MsgBox Description(count) & " does not exist.  Please correct before running Model."
+          MsgBox Description(count) & " does not exist. The Subsidy Model is unable to connect to the network drives. Please try the following before contacting Budget: (i) confirm that your status is ""Authenticated"" on Zscaler and (ii) that you can connect to the ""Subsidy Model (U:)"" drive. If the error continues, please dowload the lastest model from SharePoint and transfer your inputs. Please correct before running Model."
           End
       End If
     Next
